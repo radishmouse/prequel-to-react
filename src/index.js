@@ -79,13 +79,11 @@ function addressIsNotPacfic(person) {
 // });
 
 // const noPacifics = persons.filter(person => person.address !== 'Pacific');
-const noPacifics = persons.filter(({address}) => address !== 'Pacific');
+const noPacifics = persons.filter(({ address }) => address !== 'Pacific');
 
-console.log(noPacifics);
+// console.log(noPacifics);
 
-// console.log(persons.map(greet));
-
-
+console.log(persons.filter(({ address }) => address !== 'Pacific').map(greet));
 
 // const newArray = [];
 // for (let onePerson of persons) {
