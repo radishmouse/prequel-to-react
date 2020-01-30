@@ -50,12 +50,51 @@ function fromEarth(originalObject) {
     // then return that object
     return modifedVersionOfObject;
 }
-console.log(greet(fromEarth(person)));
-console.log(greet(person));
+// console.log(greet(fromEarth(person)));
+// console.log(greet(person));
 // const person2 = {
 //     name: 'Travis'
 // };
 // console.log(greet(person2));
+
+const persons = [
+    { name: 'Alice', address: 'Atlanta' },
+    { name: 'Bob', address: 'Atlanta' },
+    { name: 'Cthulu', address: 'Pacific' },
+];
+
+const modifiedPersons = [
+    'Daria',
+    ...persons,
+];
+
+function addressIsNotPacfic(person) {
+    return person.address !== 'Pacific';
+}
+
+// console.log(addressIsNotPacfic(persons[2]));
+
+// const noPacifics = persons.filter((person) => {
+//     return person.address !== 'Pacific';
+// });
+
+// const noPacifics = persons.filter(person => person.address !== 'Pacific');
+const noPacifics = persons.filter(({address}) => address !== 'Pacific');
+
+console.log(noPacifics);
+
+// console.log(persons.map(greet));
+
+
+
+// const newArray = [];
+// for (let onePerson of persons) {
+//     newArray.push(greet(onePerson));
+// }
+// console.log(newArray);
+
+// console.log(modifiedPersons);
+
 
 
 // import React from 'react';
